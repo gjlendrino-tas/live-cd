@@ -12,7 +12,7 @@
 # EOF
 # mkfs.xfs /dev/sdb1
 # mkdir /mnt/tools
-# mount /dev/sdb1 /mnt/tools/
+mount /dev/sdb1 /mnt/tools/
 echo "ubuntu:tase.1988" | chpasswd
 echo "root:tase.1988" | chpasswd
 if [ ! -d /mnt/tools/openssh-server-offline ]; then
