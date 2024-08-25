@@ -11,10 +11,12 @@
 # q
 # EOF
 # mkfs.xfs /dev/sdb1
-# mkdir /mnt/tools
-mount /dev/sdb1 /mnt/tools/
 echo "ubuntu:tase.1988" | chpasswd
 echo "root:tase.1988" | chpasswd
+if [ ! -d /mnt/tools/ ]; then
+  mkdir /mnt/tools
+  mount /dev/sdb1 /mnt/tools/
+fi
 if [ ! -d /mnt/tools/openssh-server-offline ]; then
   mkdir /mnt/tools/openssh-server-offline
   apt install -y --download-only openssh-server
